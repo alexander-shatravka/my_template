@@ -1,0 +1,86 @@
+@import '_variables';
+@import '_include-media';
+@import '_reset';
+@import '_slick';
+@import '_helpers';
+@import '_fonts';
+@import '_flaticon';
+@import '_mixins';
+//@import '_hamburger';
+//@import '_base';
+
+
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:100,300,400,500,700,800,900&subset=cyrillic');
+
+
+html {
+	overflow-x: hidden!important;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	overflow: hidden;
+
+	&.scroll-off {
+		max-height: 100%;
+		overflow: hidden;
+	}
+}
+
+*{	
+	box-sizing: border-box;
+	outline: 0!important;
+	//user-select: none!important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+
+p, a, span {
+	font-weight: 500;
+}
+
+b {
+	font-weight: 700;
+}
+
+
+a {
+	text-decoration: none;
+	outline: 0!important;
+}
+
+#wrapper {
+	overflow-x: hidden!important;
+	min-height: 100vh;	
+}
+
+#shadow-bg {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba($color: #000000, $alpha: 0.5);
+	z-index: 999;
+	display: none;
+
+	&.enable {
+		display: block;
+	}
+}
+
+.row-hidden {
+	visibility: hidden;
+	overflow: hidden;
+	height: 0!important;
+	transition: 0.5s;
+	transition-delay: 1s;
+
+	.row {
+		height: 0;
+		margin: 0;
+		padding: 0;
+	}
+}
